@@ -1,5 +1,13 @@
 package com.tester.extend.demo;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.ResourceCDN;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.model.TestAttribute;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.ChartLocation;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.testng.*;
 import org.testng.xml.XmlSuite;
 
@@ -98,8 +106,10 @@ public class ExtentTestNGIReporterListener implements IReporter {
         if(!reportDir.exists()&& !reportDir .isDirectory()){
             reportDir.mkdir();
         }
-        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(OUTPUT_FOLDER + FILE_NAME);
+
         // 设置静态文件的DNS
+
+        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(OUTPUT_FOLDER + FILE_NAME);//解决访问不了样式代码
         htmlReporter.config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
         htmlReporter.config().setDocumentTitle("api自动化测试报告");
         htmlReporter.config().setReportName("api自动化测试报告");

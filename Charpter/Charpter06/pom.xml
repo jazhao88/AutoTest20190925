@@ -12,10 +12,10 @@
     <artifactId>Charpter06</artifactId>
     <dependencies>
         <dependency>
-            <groupId>com.relevantcodes</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>2.41.1</version>
-        </dependency>
+        <groupId>com.relevantcodes</groupId>
+        <artifactId>extentreports</artifactId>
+        <version>2.41.1</version>
+    </dependency>
         <dependency>
             <groupId>com.vimalselvam</groupId>
             <artifactId>testng-extentsreport</artifactId>
